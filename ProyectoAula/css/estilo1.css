@@ -1,0 +1,197 @@
+:root {
+    --green: #2e7d32;
+    --light-green: #81c784;
+    --dark-green: #1b5e20;
+    --bg: #f4fef6;
+    --white: #ffffff;
+    --gray: #e0e0e0;
+    --text: #333;
+    --hover: #c8e6c9;
+    --active: #a5d6a7;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: var(--green);
+    color: var(--white);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    position: fixed;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: var(--white);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nav-link i {
+    margin-right: 10px;
+}
+
+.nav-link:hover {
+    background-color: var(--hover);
+    color: var(--dark-green);
+}
+
+.nav-link.active {
+    background-color: var(--active);
+    color: var(--dark-green);
+    font-weight: bold;
+}
+
+.main-content {
+    margin-left: 240px;
+    padding: 2rem;
+    flex-grow: 1;
+    background-color: var(--bg);
+    min-height: 100vh;
+}
+
+.page-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark-green);
+}
+
+.header {
+    border-bottom: 2px solid var(--gray);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.course-card, .profile-box {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.course-title {
+    color: var(--green);
+    margin: 0.5rem 0;
+}
+
+.course-teacher, .course-description {
+    color: #555;
+}
+
+.progress-container {
+    margin-top: 1rem;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+
+.progress-bar {
+    height: 8px;
+    background-color: var(--gray);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.course-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.btn-outline {
+    border: 1px solid var(--green);
+    color: var(--green);
+    background-color: transparent;
+}
+
+.search-box {
+    padding: 0.5rem;
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.courses-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    color: var(--dark-green);
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
